@@ -20,89 +20,89 @@ class NumberToWord {
       case Locale.en_ind:
         List<String> ones = [
           '',
-          'one ',
-          'two ',
-          'three ',
-          'four ',
-          'five ',
-          'six ',
-          'seven ',
-          'eight ',
-          'nine ',
-          'ten ',
-          'eleven ',
-          'twelve ',
-          'thirteen ',
-          'fourteen ',
-          'fifteen ',
-          'sixteen ',
-          'seventeen ',
-          'eighteen ',
-          'nineteen '
+          'One ',
+          'Two ',
+          'Three ',
+          'Four ',
+          'Five ',
+          'Six ',
+          'Seven ',
+          'Eight ',
+          'Nine ',
+          'Ten ',
+          'Eleven ',
+          'Twelve ',
+          'Thirteen ',
+          'Fourteen ',
+          'Fifteen ',
+          'Sixteen ',
+          'Seventeen ',
+          'Eighteen ',
+          'Nineteen '
         ];
         List<String> tens = [
           '',
           '',
-          'twenty',
-          'thirty',
-          'forty',
-          'fifty',
-          'sixty',
-          'seventy',
-          'eighty',
-          'ninety'
+          'Twenty',
+          'Thirty',
+          'Forty',
+          'Fifty',
+          'Sixty',
+          'Seventy',
+          'Eighty',
+          'Ninety'
         ];
 
         str += (numberString[0]) != '0'
-            ? ones[int.parse(numberString[0])] + 'hundred '
+            ? ones[int.parse(numberString[0])] + 'Hundred '
             : ''; //hundreds
         if ((int.parse('${numberString[1]}${numberString[2]}')) < 20 &&
             (int.parse('${numberString[1]}${numberString[2]}')) > 9) {
           str += ones[int.parse('${numberString[1]}${numberString[2]}')] +
-              'crore ';
+              'Crore ';
         } else {
           str += (numberString[1]) != '0'
               ? tens[int.parse(numberString[1])] + ' '
               : ''; //tens
           str += (numberString[2]) != '0'
-              ? ones[int.parse(numberString[2])] + 'crore '
+              ? ones[int.parse(numberString[2])] + 'Crore '
               : ''; //ones
           str += (numberString[1] != '0') && (numberString[2] == '0')
-              ? 'crore '
+              ? 'Crore '
               : '';
         }
         if ((int.parse('${numberString[3]}${numberString[4]}')) < 20 &&
             (int.parse('${numberString[3]}${numberString[4]}')) > 9) {
           str +=
-              ones[int.parse('${numberString[3]}${numberString[4]}')] + 'lakh ';
+              ones[int.parse('${numberString[3]}${numberString[4]}')] + 'Lakh ';
         } else {
           str += (numberString[3]) != '0'
               ? tens[int.parse(numberString[3])] + ' '
               : ''; //tens
           str += (numberString[4]) != '0'
-              ? ones[int.parse(numberString[4])] + 'lakh '
+              ? ones[int.parse(numberString[4])] + 'Lakh '
               : ''; //ones
           str += (numberString[3] != '0') && (numberString[4] == '0')
-              ? 'lakh '
+              ? 'Lakh '
               : '';
         }
         if ((int.parse('${numberString[5]}${numberString[6]}')) < 20 &&
             (int.parse('${numberString[5]}${numberString[6]}')) > 9) {
           str += ones[int.parse('${numberString[5]}${numberString[6]}')] +
-              'thousand ';
+              'Thousand ';
         } else {
           str += (numberString[5]) != '0'
               ? tens[int.parse(numberString[5])] + ' '
               : ''; //ten thousands
           str += (numberString[6]) != '0'
-              ? ones[int.parse(numberString[6])] + 'thousand '
+              ? ones[int.parse(numberString[6])] + 'Thousand '
               : ''; //thousands
           str += (numberString[5] != '0') && (numberString[6] == '0')
-              ? 'thousand '
+              ? 'Thousand '
               : '';
         }
         str += (numberString[7]) != '0'
-            ? ones[int.parse(numberString[7])] + 'hundred '
+            ? ones[int.parse(numberString[7])] + 'Hundred '
             : ''; //hundreds
         if ((int.parse('${numberString[8]}${numberString[9]}')) < 20 &&
             (int.parse('${numberString[8]}${numberString[9]}')) > 9) {
